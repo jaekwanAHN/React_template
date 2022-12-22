@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import useToggle from "../../hooks/useToggle";
 
 const ToggleContainer = styled.label`
-  dispaly: inline-block;
+  display: inline-block;
   cursor: pointer;
   user-select: none;
 `;
