@@ -17,8 +17,8 @@ const ToastManager = ({ bind }) => {
   const createToast = useCallback((message, duration) => {
     const newToast = {
       id: v4(),
-      message: message,
-      duration: duration,
+      message,
+      duration,
     };
     setToasts((oldToasts) => [...oldToasts, newToast]);
   }, []);
@@ -35,7 +35,7 @@ const ToastManager = ({ bind }) => {
     <Container>
       {toasts.map(({ id, message, duration }) => (
         <ToastItem
-          meassage={message}
+          message={message}
           duration={duration}
           key={id}
           onDone={() => removeToast(id)}
